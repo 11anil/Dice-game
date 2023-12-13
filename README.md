@@ -1,3 +1,3 @@
 # Dice-game 
 
-A Fun game using react
+A Fun game using React Js
