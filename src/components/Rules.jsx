@@ -22,7 +22,8 @@ export default Rules;
 const RulesContainer = styled.div`
   max-width: 800px;
   margin: 0 auto;
-  background-color: #fbf1f1;
+  background-color: ${(props) => props.theme.rulesBg};
+  color: ${(props) => props.theme.text};
   padding: 20px;
   margin-top: 40px;
   border-radius: 10px;
@@ -31,5 +32,15 @@ const RulesContainer = styled.div`
   }
   .text {
     margin-top: 24px;
+  }
+
+  @media (max-width: 768px) {
+    max-width: 90%;
+    h2 {
+      font-size: 18px;
+    }
+    p {
+      font-size: 14px;
+    }
   }
 `;

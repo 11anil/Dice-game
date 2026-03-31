@@ -67,6 +67,10 @@ export default GamePlay;
 
 const MainContainer = styled.main`
   padding-top: 70px;
+  background-color: ${(props) => props.theme.bg};
+  color: ${(props) => props.theme.text};
+  min-height: 100vh;
+
   .top_section {
     display: flex;
     justify-content: space-around;
@@ -79,6 +83,13 @@ const MainContainer = styled.main`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 10px;
+  }
+
+  @media (max-width: 1024px) {
+    .top_section {
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
   }
 `;

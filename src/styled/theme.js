@@ -1,0 +1,31 @@
+export const lightTheme = {
+  bg: "#ffffff",
+  text: "#000000",
+  buttonBg: "#000000",
+  buttonText: "#ffffff",
+  outlineButtonBg: "transparent",
+  outlineButtonText: "#000000",
+  outlineButtonBorder: "#000000",
+  boxBg: "#ffffff",
+  boxText: "#000000",
+  boxBorder: "#000000",
+  boxSelectedBg: "#000000",
+  boxSelectedText: "#ffffff",
+  rulesBg: "#fbf1f1",
+};
+
+export const darkTheme = {
+  bg: "#1a1a1a",
+  text: "#ffffff",
+  buttonBg: "#ffffff",
+  buttonText: "#000000",
+  outlineButtonBg: "transparent",
+  outlineButtonText: "#ffffff",
+  outlineButtonBorder: "#ffffff",
+  boxBg: "#2d2d2d",
+  boxText: "#ffffff",
+  boxBorder: "#444444",
+  boxSelectedBg: "#ffffff",
+  boxSelectedText: "#000000",
+  rulesBg: "#333333",
+};

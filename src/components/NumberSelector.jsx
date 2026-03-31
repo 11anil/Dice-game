@@ -44,21 +44,47 @@ const NumberSelectorContainer = styled.div`
   }
   p {
     font-size: 24px;
-    font-weight: 700px;
+    font-weight: 700;
+    color: ${(props) => props.theme.text};
   }
   .error {
     color: red;
+  }
+
+  @media (max-width: 768px) {
+    align-items: center;
+    .flex {
+      gap: 12px;
+    }
+    p {
+      font-size: 18px;
+    }
   }
 `;
 
 const Box = styled.div`
   height: 72px;
   width: 72px;
-  border: 1px solid black;
+  border: 1px solid ${(props) => props.theme.boxBorder};
   display: grid;
   place-items: center;
   font-size: 24px;
   font-weight: 700;
-  background-color: ${(props) => (props.isSelected ? "black" : "white")};
-  color: ${(props) => (!props.isSelected ? "black" : "white")};
+  background-color: ${(props) =>
+    props.isSelected ? props.theme.boxSelectedBg : props.theme.boxBg};
+  color: ${(props) =>
+    !props.isSelected ? props.theme.boxText : props.theme.boxSelectedText};
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  &:hover {
+    background-color: ${(props) =>
+    props.isSelected ? props.theme.boxSelectedBg : props.theme.boxBorder};
+  }
+
+  @media (max-width: 768px) {
+    height: 50px;
+    width: 50px;
+    font-size: 18px;
+  }
 `;

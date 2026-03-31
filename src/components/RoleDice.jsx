@@ -4,7 +4,7 @@ const RoleDice = ({ roleDice, currentDice }) => {
   return (
     <DiceContainer>
       <div className="dice" onClick={roleDice}>
-        <img src={`/images/dice/dice_${currentDice}.png`} alt="dice 1" />
+        <img src={`/images/dice/dice_${currentDice}.png`} alt="dice" />
       </div>
       <p>Click on Dice to roll</p>
     </DiceContainer>
@@ -18,6 +18,7 @@ const DiceContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  color: ${(props) => props.theme.text};
 
   .dice {
     cursor: pointer;
@@ -25,5 +26,14 @@ const DiceContainer = styled.div`
 
   p {
     font-size: 24px;
+  }
+
+  @media (max-width: 768px) {
+    p {
+      font-size: 18px;
+    }
+    img {
+      width: 150px;
+    }
   }
 `;
